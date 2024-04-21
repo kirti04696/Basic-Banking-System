@@ -1,0 +1,45 @@
+Step 1: Create Database;
+Step 2: Use database
+Step 3: Execute the following query to create customer table 
+
+CREATE TABLE `customer` (
+  `customer_id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(40) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `acc_opening_date` date NOT NULL,
+  `account_no` int NOT NULL,
+  `balance` int NOT NULL,
+  PRIMARY KEY (`customer_id`),
+  UNIQUE KEY `email_UNIQUE` (`email`),
+  UNIQUE KEY `account_no_UNIQUE` (`account_no`),
+  KEY `index4` (`customer_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+Step 4: Execute the following query to create transaction table
+
+CREATE TABLE `transaction` (
+  `transfer_id` int NOT NULL AUTO_INCREMENT,
+  `transfer_from` int NOT NULL,
+  `transfer_to` int NOT NULL,
+  `date` date NOT NULL,
+  `amount` int NOT NULL,
+  `status` varchar(10) NOT NULL,
+  PRIMARY KEY (`transfer_id`),
+  KEY `tranf_to_idx` (`transfer_to`),
+  KEY `transfer_from_idx` (`transfer_from`),
+  CONSTRAINT `tranf_to` FOREIGN KEY (`transfer_to`) REFERENCES `customer` (`account_no`)
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+ 
+Step 3: Execute the following query to insert dummy data in customer table
+
+insert into customer (name, email, acc_opening_date, account_no, balance) values ('Reginald', 'rbedder0@twitter.com', '11/27/2023', 335922, 57396);
+insert into customer (name, email, acc_opening_date, account_no, balance) values ('Phyllys', 'pruslinge1@etsy.com', '11/8/2023', 6080457, 67476);
+insert into customer (name, email, acc_opening_date, account_no, balance) values ('Niall', 'narstall2@zdnet.com', '8/31/2023', 9978796, 56887);
+insert into customer (name, email, acc_opening_date, account_no, balance) values ('Roscoe', 'rwillison3@posterous.com', '9/16/2023', 7296007, 79099);
+insert into customer (name, email, acc_opening_date, account_no, balance) values ('Jamey', 'jmccart4@opensource.org', '6/23/2023', 5582451, 82227);
+insert into customer (name, email, acc_opening_date, account_no, balance) values ('Christiano', 'cmachin5@sina.com.cn', '12/13/2023', 6032375, 20738);
+insert into customer (name, email, acc_opening_date, account_no, balance) values ('Codie', 'ckaret6@toplist.cz', '4/27/2023', 5718366, 50461);
+insert into customer (name, email, acc_opening_date, account_no, balance) values ('Oona', 'ogatrell7@jugem.jp', '10/10/2023', 3054451, 23090);
+insert into customer (name, email, acc_opening_date, account_no, balance) values ('Petronia', 'pscobie8@1688.com', '10/29/2023', 6011480, 57323);
+insert into customer (name, email, acc_opening_date, account_no, balance) values ('Ara', 'adeem9@linkedin.com', '3/10/2024', 5463166, 77899);
+ 
