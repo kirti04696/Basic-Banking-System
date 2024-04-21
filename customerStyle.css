@@ -1,0 +1,26 @@
+body{
+    background-color: rgb(179, 210, 254);
+}
+
+.customer-detail{
+    
+    
+    background-color: white;
+    color: rgb(7, 7, 87);
+    margin: 8% 28%;
+    padding: 2% 5%;
+    font-size: 20px;
+    gap: 5px;
+}
+
+
+.customer-info{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+.customer-info div{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}

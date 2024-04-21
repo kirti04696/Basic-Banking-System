@@ -1,0 +1,35 @@
+body{
+    /* background-color: rgb(179, 210, 254); */
+}
+.flex-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+.btn{
+    color: white;
+    text-align: center;
+    margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: medium;
+}
+.btn-primary{
+    background-color: rgb(6, 55, 250);
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+
+}
+h1{
+    font-family: Georgia, Times, serif;
+    font-size: 45px;
+    color: rgb(171, 14, 110);
+}
+.my-table tbody tr{
+    margin: 1px;
+}
